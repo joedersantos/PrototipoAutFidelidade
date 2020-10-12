@@ -33,8 +33,8 @@ namespace Prototipo.Domain.Handlers
                 throw new EmailJaCadastradoException("Usuario ou senha incorretos!");
 
             var handler = new JwtSecurityTokenHandler();
-            const string key = "fidelidade@Api777777777";
-            var chaveSecreta = Encoding.ASCII.GetBytes(key.ToMd5());
+            var chaveSecreta = HeperExtension.ChaveScreta();
+
             DateTime dataExpiracao = DateTime.UtcNow.AddHours(2);
 
             var tokenDescriptor = new SecurityTokenDescriptor

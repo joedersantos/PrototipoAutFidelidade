@@ -10,8 +10,8 @@ namespace Prototipo.Infra.Data
 {
     public static class Register
     {
-        private const string CONN_STRING = "Server=db;Port=3306;Database=product-db;Uid=root; Pwd=myPass;";
-        //private const string CONN_STRING = "Server=localhost;Port=3306;Database=fidelidade-db;Uid=root; Pwd=myPass;";
+        //private const string CONN_STRING = "Server=db;Port=3306;Database=product-db;Uid=root; Pwd=myPass;";
+        private const string CONN_STRING = "Server=localhost;Port=3306;Database=fidelidade-db;Uid=root; Pwd=myPass;";
 
         public static IServiceCollection AddInfra(this IServiceCollection services, IConfiguration configuration)
         {

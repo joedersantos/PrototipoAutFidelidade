@@ -58,7 +58,7 @@ namespace Prototipo.Api.Controllers
 
         // PUT api/<UsuarioController>/5
         [HttpPut("{id}")]
-        [Authorize("Bearer")]
+        [Authorize]
         public async Task<ActionResult> Put(Guid id, [FromBody] AtaulizarEnderecoEntregaRequest request)
         {
             try

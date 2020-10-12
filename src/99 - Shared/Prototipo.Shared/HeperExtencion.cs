@@ -16,5 +16,10 @@ namespace Prototipo.Shared
             }
             return hash;
         }
+        public static byte[] ChaveScreta()
+        {
+            const string key = "fidelidade@Api777777777";
+            return Encoding.ASCII.GetBytes(key.ToMd5());
+        }
     }
 }
