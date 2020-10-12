@@ -8,6 +8,8 @@ namespace Prototipo.App
 {
     public interface IUsuarioAppService
     {
-        Task Incluir(CriarUsuarioRequest request);
+        Task<UsuarioResponse> Incluir(CriarUsuarioRequest request);
+        Task<LoginResponse> Login(LoginRequest request);
+        ValueTask AtaulizarEndereco(Guid id, AtaulizarEnderecoEntregaRequest request);
     }
 }

@@ -3,10 +3,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Prototipo.Contracts
 {
-    public class CriarUsuarioRequest
+    public class LoginRequest
     {
-        [Required]
-        public string Nome { get; set; }
         [Required]
         public string Email { get; set; }
         [Required]

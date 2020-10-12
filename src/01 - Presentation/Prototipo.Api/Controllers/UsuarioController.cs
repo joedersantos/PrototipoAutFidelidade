@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Prototipo.App;
 using Prototipo.Contracts;
+using Prototipo.Shared.CustomException;
 
 namespace Prototipo.Api.Controllers
 {
@@ -35,33 +37,62 @@ namespace Prototipo.Api.Controllers
             return "value";
         }
 
-        // POST api/<UsuarioController>
         [HttpPost]
-        public async Task<ActionResult<string>> Post([FromBody] CriarUsuarioRequest request)
+        public async Task<ActionResult<UsuarioResponse>> Post([FromBody] CriarUsuarioRequest request)
         {
             try
             {
-                await _usuarioApp.Incluir(request);
-                return Ok("Usuario Cadastrado com sucesso..!");
+                return Ok(await _usuarioApp.Incluir(request));
+            }
+            catch (EmailJaCadastradoException ex)
+            {
+                return BadRequest(ex.Message);
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex, $"Erro ao cadastrar Usuario: {ex.Message}");
                 return BadRequest($"Erro ao cadastrar Usuario: {ex.Message}");
             }
-           
+
         }
 
         // PUT api/<UsuarioController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        [Authorize("Bearer")]
+        public async Task<ActionResult> Put(Guid id, [FromBody] AtaulizarEnderecoEntregaRequest request)
         {
+            try
+            {
+                await _usuarioApp.AtaulizarEndereco(id, request);
+                return Ok("Endereço Cadastrado com sucesso..!");
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"Erro ao add endereço: {ex.Message}");
+                return BadRequest($"Erro: {ex.Message}");
+            }
         }
 
-        // DELETE api/<UsuarioController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+        // POST api/<UsuarioController>
+        [HttpPost("login")]
+        public async Task<ActionResult<LoginResponse>> Login([FromBody] LoginRequest request)
         {
+            try
+            {
+                return await _usuarioApp.Login(request);
+            }
+            catch (EmailJaCadastradoException ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"Erro ao fazer login: {ex.Message}");
+                return BadRequest($"Erro: {ex.Message}");
+            }
+
         }
+
+
     }
 }
