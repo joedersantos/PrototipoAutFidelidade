@@ -17,13 +17,25 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A6DE0133-D20
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{D7B581B3-802B-4C29-BE9A-11431CB17027}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prototipo.App", "src\02 - Application\Prototipo.App\Prototipo.App.csproj", "{8AEA5562-89FF-46A9-9BF6-8EF4E9D13295}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prototipo.App", "src\02 - Application\Prototipo.App\Prototipo.App.csproj", "{8AEA5562-89FF-46A9-9BF6-8EF4E9D13295}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prototipo.Contracts", "src\02 - Application\Prototipo.Contracts\Prototipo.Contracts.csproj", "{241FA529-1494-4D38-BB5D-14C679B62704}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prototipo.Contracts", "src\02 - Application\Prototipo.Contracts\Prototipo.Contracts.csproj", "{241FA529-1494-4D38-BB5D-14C679B62704}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prototipo.Domain", "src\03 - Domain\Prototipo.Domain\Prototipo.Domain.csproj", "{B9AE5C2C-C0EA-4BF1-A4CE-912E7B7C6BB2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prototipo.Domain", "src\03 - Domain\Prototipo.Domain\Prototipo.Domain.csproj", "{B9AE5C2C-C0EA-4BF1-A4CE-912E7B7C6BB2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prototipo.Api", "src\01 - Presentation\Prototipo.Api\Prototipo.Api.csproj", "{67945F25-F786-4C4F-A6A6-DAA7B8B45191}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prototipo.Api", "src\01 - Presentation\Prototipo.Api\Prototipo.Api.csproj", "{67945F25-F786-4C4F-A6A6-DAA7B8B45191}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docker", "Docker", "{81D4CF00-42DA-4C92-B7FA-C9696D9253CE}"
+	ProjectSection(SolutionItems) = preProject
+		.dockerignore = .dockerignore
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Db", "Db", "{6BA85E8F-2217-4E7C-A1DF-BCDBA2A615DF}"
+	ProjectSection(SolutionItems) = preProject
+		Db\Dockerfile = Db\Dockerfile
+		Db\prepare.sql = Db\prepare.sql
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,6 +73,7 @@ Global
 		{241FA529-1494-4D38-BB5D-14C679B62704} = {489E49EF-D229-4CE0-A0AF-A5F590FC63AF}
 		{B9AE5C2C-C0EA-4BF1-A4CE-912E7B7C6BB2} = {55A6E92A-71CA-4AC8-A688-7B0E06B78EEE}
 		{67945F25-F786-4C4F-A6A6-DAA7B8B45191} = {9E90FB49-95D1-42EF-BA6E-E29AD84C4400}
+		{6BA85E8F-2217-4E7C-A1DF-BCDBA2A615DF} = {81D4CF00-42DA-4C92-B7FA-C9696D9253CE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B92E7E3F-AF24-4321-B345-8615EB6207A7}

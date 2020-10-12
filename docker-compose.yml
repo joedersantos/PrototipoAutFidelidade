@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  db:
+    build: ./Db
+    ports: 
+    - 3306:3306
+  app:
+    build:
+      context: .
+      dockerfile: src/01 - Presentation/Prototipo.Api/Dockerfile
+    ports:
+      - 8080:80
+    depends_on:
+      - db
