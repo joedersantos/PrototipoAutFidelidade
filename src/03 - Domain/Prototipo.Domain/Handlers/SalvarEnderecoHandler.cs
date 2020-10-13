@@ -39,7 +39,6 @@ namespace Prototipo.Domain.Handlers
                     UF = request.UF,
                     DataCriacao = DateTime.UtcNow,
                     DataAtaulizacao = DateTime.UtcNow
-
                 };
 
                 return await repository.Inserir(endereco);
