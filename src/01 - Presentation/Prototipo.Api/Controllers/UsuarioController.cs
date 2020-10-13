@@ -57,14 +57,14 @@ namespace Prototipo.Api.Controllers
         }
 
         // PUT api/<UsuarioController>/5
-        [HttpPut("{id}")]
+        [HttpPut("enderecoEntrega")]
         [Authorize]
-        public async Task<ActionResult> Put(Guid id, [FromBody] AtaulizarEnderecoEntregaRequest request)
+        public async Task<ActionResult> Put([FromBody] SalvarEnderecoEntregaRequest request)
         {
             try
             {
-                await _usuarioApp.AtaulizarEndereco(id, request);
-                return Ok("Endereço Cadastrado com sucesso..!");
+                await _usuarioApp.AtaulizarEndereco(request);
+                return Ok("Endereço Ataulizado com sucesso..!");
             }
             catch (Exception ex)
             {
@@ -81,7 +81,7 @@ namespace Prototipo.Api.Controllers
             {
                 return await _usuarioApp.Login(request);
             }
-            catch (EmailJaCadastradoException ex)
+            catch (UsuarioNaoFoiEncontradoException ex)
             {
                 return BadRequest(ex.Message);
             }

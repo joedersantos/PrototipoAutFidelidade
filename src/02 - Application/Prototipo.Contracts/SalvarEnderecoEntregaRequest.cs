@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Prototipo.Contracts
 {
-    public class AtaulizarEnderecoEntregaRequest
+    public class SalvarEnderecoEntregaRequest
     {
         [Required]
         public string Logradouro { get; set; }

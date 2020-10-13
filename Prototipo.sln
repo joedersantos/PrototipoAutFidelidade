@@ -41,6 +41,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prototipo.Infra.Data", "src
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prototipo.Shared", "src\99 - Shared\Prototipo.Shared\Prototipo.Shared.csproj", "{C0442D0D-F3B4-4792-8453-3094BBDFFAEE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prototipo.Test.Domain", "Tests\Prototipo.Test.Domain\Prototipo.Test.Domain.csproj", "{372AFC7F-CA44-4A87-B3D4-7D1B45CAD327}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,6 +73,10 @@ Global
 		{C0442D0D-F3B4-4792-8453-3094BBDFFAEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0442D0D-F3B4-4792-8453-3094BBDFFAEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C0442D0D-F3B4-4792-8453-3094BBDFFAEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{372AFC7F-CA44-4A87-B3D4-7D1B45CAD327}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{372AFC7F-CA44-4A87-B3D4-7D1B45CAD327}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{372AFC7F-CA44-4A87-B3D4-7D1B45CAD327}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{372AFC7F-CA44-4A87-B3D4-7D1B45CAD327}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -88,6 +94,7 @@ Global
 		{6BA85E8F-2217-4E7C-A1DF-BCDBA2A615DF} = {81D4CF00-42DA-4C92-B7FA-C9696D9253CE}
 		{F0928682-4518-4CDE-8EC7-90BFF0429AB3} = {7A5F49BB-B645-40BA-93AE-89D89F88F6B2}
 		{C0442D0D-F3B4-4792-8453-3094BBDFFAEE} = {40D3B3F7-CBFD-4A8E-A53C-5CAB004FB03E}
+		{372AFC7F-CA44-4A87-B3D4-7D1B45CAD327} = {D7B581B3-802B-4C29-BE9A-11431CB17027}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B92E7E3F-AF24-4321-B345-8615EB6207A7}

@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure;
 using Prototipo.Domain.Models;
 using System;
 using System.Collections.Generic;
@@ -21,6 +22,7 @@ namespace Prototipo.Infra.Data.Context
         {
             modelBuilder.Entity<Usuario>().HasKey(o => o.Id);
             modelBuilder.Entity<Endereco>().HasKey(o => o.Id);
+            modelBuilder.Entity<Endereco>().HasAlternateKey(f => f.UsuarioId);
         }
     }
 }

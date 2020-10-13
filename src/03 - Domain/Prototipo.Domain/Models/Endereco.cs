@@ -13,7 +13,8 @@ namespace Prototipo.Domain.Models
         public string Cidade { get; set; }
         public string UF { get; set; }
         public DateTime DataCriacao { get; set; }
+        public DateTime DataAtaulizacao { get; set; }
 
-        public virtual Usuario Usuario { get; set; }
+        public virtual Guid UsuarioId { get; set; }
     }
 }

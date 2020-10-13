@@ -10,6 +10,6 @@ namespace Prototipo.App
     {
         Task<UsuarioResponse> Incluir(CriarUsuarioRequest request);
         Task<LoginResponse> Login(LoginRequest request);
-        ValueTask AtaulizarEndereco(Guid id, AtaulizarEnderecoEntregaRequest request);
+        ValueTask AtaulizarEndereco(SalvarEnderecoEntregaRequest request);
     }
 }

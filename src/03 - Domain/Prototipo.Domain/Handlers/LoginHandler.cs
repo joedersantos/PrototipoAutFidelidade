@@ -30,7 +30,7 @@ namespace Prototipo.Domain.Handlers
             var usuario = await repository.BuscarPorEmailSenha(request.Email, request.Senha.ToMd5());
 
             if (usuario == null)
-                throw new EmailJaCadastradoException("Usuario ou senha incorretos!");
+                throw new UsuarioNaoFoiEncontradoException("Usuario ou senha incorretos!");
 
             var handler = new JwtSecurityTokenHandler();
             var chaveSecreta = HeperExtension.ChaveScreta();
