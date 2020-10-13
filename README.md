@@ -1,4 +1,4 @@
-[![Actions Status](https://github.com/joedersantos/PrototipoAutFidelidade/workflows/Build%20and%20Test/badge.svg)](https://github.com/joedersantos/PrototipoAutFidelidade/actions)
+![.NET Core](https://github.com/joedersantos/PrototipoAutFidelidade/workflows/.NET%20Core/badge.svg)
 
 # PrototipoAutFidelidade
 Protótipo de autenticação cadastro de usuário  
